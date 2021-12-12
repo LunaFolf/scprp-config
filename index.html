@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCP:RP Configurator</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Roboto&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+  <div class="textBody">
+    <h1>SCP:RP Configurator</h1>
+    <p>This tool is designed for Bezz to be able to configure data/code or other shit that Whiskee needs to be able to continue development.</p>
+    <p>A quick word of warning - <strong>There is no protection on this app</strong>. If it leaks, or the link is given to the wrong person. We're fucked. So Bezz, <strong>DON'T BE AN IDIOT</strong>.</p>
+    <hr>
+    <h2>Voice Lines</h2>
+    <p>This section is for configuring CASSIE, Announcements and other SCP:RP Voice Lines.</p>
+    <p>The way we are going to acheive this, is a similar process to how VOX from HL1 works. We are going to store each <code>.wav</code> file we need, and set up ordered Arrays to play each clip one after another.</p>
+    <p>These <code>.wav</code> files are referred to as Clips throughout this application.</p>
+    <p>The UI below will allow you to add new Clips, so we know what to add to the server.</p>
+
+    <hr class="faded">
+    
+    <h4>Used Clips <button class="dense" id="hideClips">Hide Clips</button></h4>
+    <div id="vocals"></div>
+    <br>
+
+    <hr class="faded">
+    
+    <h4>Existing Lines <button class="dense" id="hideLines">Hide Lines</button></h4>
+    <div id="voicelines"></div>
+
+    <hr class="faded">
+    
+    <h4>New Line</h4>
+    <div class="card dense">
+      <input type="text" id="voiceLineName" placeholder="Voice Line Name">
+      <input type="text" id="voiceLineDescription" placeholder="Voice Line Description">
+
+      <hr class="faded">
+
+      <div class="indent">
+        <input type="text" id="voiceLineClipFilter" placeholder="Filter">
+        <div id="ClipSelection"></div>
+      </div>
+
+      <hr class="faded">
+
+      <h6>Selected Clips</h6>
+      <div id="selectedClips"></div>
+
+      <hr class="faded">
+
+      <button type="button" id="voiceLineClipsPreview" disabled>Preview</button>
+      <button type="button" id="voiceLineSubmit" class="float-right">Submit</button>
+    </div>
+    
+  </div>
+</body>
+</html>
